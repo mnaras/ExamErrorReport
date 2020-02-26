@@ -1,0 +1,41 @@
+﻿
+<html>
+<head>
+    <link href="~/styles.css"/>
+    <title>Error Report</title>
+</head>
+<body>
+    <header>
+        <h1>@ViewData["Title"]</h1>
+    </header>
+    <main>
+        <form action="/" method="post">
+            <div class="form-input">
+                <label>Name:</label>
+                <select name="reporter" required>
+                    @foreach (var name in ViewBag.Names)
+                    {
+                        <option value="@name">@name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-input">
+                <label for="manufacturer">Manufacturer:</label>
+                <input type="text" name="manufacturer" id="manufacturer" />
+            </div>
+            <div class="form-input">
+                <label for="serialNumber">Serial Number:</label>
+                <input type="text" name="serialNumber" id="serialNumber" />
+            </div>
+            <div class="form-input">
+                <label for="text">Description:</label>
+                <input type="text" name="description" id="description" />
+            </div>
+            <div class="form-input">
+                <button type="submit">Report</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+

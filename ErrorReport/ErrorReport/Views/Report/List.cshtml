@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+@using ErrorReport.Models;
+@model List<Report>
+
+<html>
+<head>
+
+</head>
+<body>
+    <header>
+        <h2>List</h2>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Reporter</td>
+                    <td>Manufacturer</td>
+                    <td>Serial Number</td>
+                    <td>Description</td>
+                    <td>Date</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Reporter</td>
+                        <td>@item.Manufacturer</td>
+                        <td>@item.SerialNumber</td>
+                        <td>@item.Description</td>
+                        <td>@item.DateAndTime</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</body>
+</html
+
